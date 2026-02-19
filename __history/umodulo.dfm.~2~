@@ -1,0 +1,14 @@
+object dm: Tdm
+  Height = 1080
+  Width = 1440
+  PixelsPerInch = 144
+  object conexao: TFDConnection
+    Left = 80
+    Top = 24
+  end
+  object usuario: TFDQuery
+    Connection = conexao
+    Left = 80
+    Top = 120
+  end
+end
