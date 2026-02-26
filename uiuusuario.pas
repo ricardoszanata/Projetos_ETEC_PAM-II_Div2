@@ -20,6 +20,7 @@ type
     edtususenha: TEdit;
     btngravar: TButton;
     procedure btngravarClick(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,17 +43,41 @@ begin
   // enquanto você estiver na query faça:
   with dm.usuario do
   begin
-     Close;
-     SQL.Clear;
+    Close;
+    SQL.Clear;
 
-     SQL.Add('insert into usuarios (usunome,usulogin,ususenha) values (:usunome,:usulogin,:ususenha);');
+    if (usuid = 0) then
+    begin
+      SQL.Add('insert into usuarios (usunome,usulogin,ususenha) values (:usunome,:usulogin,:ususenha);');
+    end
+    else
+    begin
+      SQL.Add('update usuarios set usunome=:usunome,usulogin=:usulogin,ususenha=:ususenha where usuid=:usuid;');
+      ParamByName('usuid').Value := usuid;
+    end;
 
-     ParamByName('usunome').Value:=edtusunome.Text;
-     ParamByName('usulogin').Value:=edtusulogin.Text;
-     ParamByName('ususenha').Value:=edtususenha.Text;
+    ParamByName('usunome').Value := edtusunome.Text;
+    ParamByName('usulogin').Value := edtusulogin.Text;
+    ParamByName('ususenha').Value := edtususenha.Text;
 
-     ExecSQL;
+    ExecSQL;
   end;
+end;
+
+procedure Tfrmiuusuario.FormShow(Sender: TObject);
+begin
+  usuid := 1;
+  with dm.usuario do
+  begin
+    Close;
+    SQL.Clear;
+    SQL.Add('select * from usuarios where usuid = :usuid;');
+    ParamByName('usuid').Value := usuid;
+    Open;
+  end;
+  edtusunome.Text := dm.usuariousunome.AsString;
+  edtusulogin.Text := dm.usuariousulogin.AsString;
+  edtususenha.Text := dm.usuarioususenha.AsString;
 end;
 
 end.
