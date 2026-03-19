@@ -2,17 +2,17 @@
 <BorlandProject>
 	<Transactions>
     <Transaction>2026/02/19 11:44:23.000.718,=C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>2026/02/19 11:50:12.000.214,C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx=C:\ETEC\Projetos_ETEC_PAM-II_Div2\uacesso.fmx</Transaction>
-    <Transaction>2026/02/19 11:50:12.000.214,C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\uacesso.pas</Transaction>
-    <Transaction>2026/02/19 11:51:11.000.412,C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Lanchonete.dproj</Transaction>
+    <Transaction>2026/02/19 11:50:12.000.214,C:\ETEC\Projetos_ETEC_PAM-II_Div2\uacesso.fmx=C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2026/02/19 11:50:12.000.214,C:\ETEC\Projetos_ETEC_PAM-II_Div2\uacesso.pas=C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2026/02/19 11:51:11.000.412,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Lanchonete.dproj=C:\Users\ricar\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>2026/02/19 11:51:39.000.776,=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
-    <Transaction>2026/02/19 11:53:49.000.814,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\umodulo.pas</Transaction>
-    <Transaction>2026/02/19 11:53:49.000.814,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.dfm=C:\ETEC\Projetos_ETEC_PAM-II_Div2\umodulo.dfm</Transaction>
+    <Transaction>2026/02/19 11:53:49.000.814,C:\ETEC\Projetos_ETEC_PAM-II_Div2\umodulo.dfm=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.dfm</Transaction>
+    <Transaction>2026/02/19 11:53:49.000.814,C:\ETEC\Projetos_ETEC_PAM-II_Div2\umodulo.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
     <Transaction>2026/02/19 12:05:52.000.711,=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
-    <Transaction>2026/02/19 12:10:13.000.666,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.fmx=C:\ETEC\Projetos_ETEC_PAM-II_Div2\uiuusuario.fmx</Transaction>
-    <Transaction>2026/02/19 12:10:13.000.666,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\uiuusuario.pas</Transaction>
-    <Transaction>2026/02/26 12:12:37.261,=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
-    <Transaction>2026/02/26 12:13:25.584,C:\ETEC\Projetos_ETEC_PAM-II_Div2\ulistausuarios.fmx=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.fmx</Transaction>
-    <Transaction>2026/02/26 12:13:25.584,C:\ETEC\Projetos_ETEC_PAM-II_Div2\ulistausuarios.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
+    <Transaction>2026/02/19 12:10:13.000.666,C:\ETEC\Projetos_ETEC_PAM-II_Div2\uiuusuario.fmx=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.fmx</Transaction>
+    <Transaction>2026/02/19 12:10:13.000.666,C:\ETEC\Projetos_ETEC_PAM-II_Div2\uiuusuario.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
+    <Transaction>2026/02/26 12:12:37.000.261,=C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas</Transaction>
+    <Transaction>2026/02/26 12:13:25.000.584,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.fmx=C:\ETEC\Projetos_ETEC_PAM-II_Div2\ulistausuarios.fmx</Transaction>
+    <Transaction>2026/02/26 12:13:25.000.584,C:\ETEC\Projetos_ETEC_PAM-II_Div2\Unit1.pas=C:\ETEC\Projetos_ETEC_PAM-II_Div2\ulistausuarios.pas</Transaction>
   </Transactions>
 </BorlandProject>
