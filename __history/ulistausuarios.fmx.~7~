@@ -69,7 +69,6 @@ object frmlistausuarios: Tfrmlistausuarios
         Size.Height = 370.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 0
-        OnItemClickEx = ListView1ItemClickEx
         SearchVisible = True
       end
     end
@@ -97,11 +96,11 @@ object frmlistausuarios: Tfrmlistausuarios
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'nome'
+      FieldName = 'usunome'
       Control = ListView1
       FillExpressions = <
         item
-          SourceMemberName = 'usuario'
+          SourceMemberName = 'usulogin'
           ControlMemberName = 'Detail'
         end>
       FillHeaderExpressions = <>

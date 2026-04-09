@@ -97,11 +97,11 @@ object frmlistausuarios: Tfrmlistausuarios
     object LinkListControlToField1: TLinkListControlToField
       Category = 'Quick Bindings'
       DataSource = BindSourceDB1
-      FieldName = 'nome'
+      FieldName = 'usunome'
       Control = ListView1
       FillExpressions = <
         item
-          SourceMemberName = 'usuario'
+          SourceMemberName = 'usulogin'
           ControlMemberName = 'Detail'
         end>
       FillHeaderExpressions = <>

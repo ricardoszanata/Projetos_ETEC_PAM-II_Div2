@@ -12,16 +12,15 @@ object frmacesso: Tfrmacesso
   object Edit1: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
     Align = Top
-    TabOrder = 1
+    TabOrder = 0
     Size.Width = 640.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False
   end
   object Edit2: TEdit
     Touch.InteractiveGestures = [LongTap, DoubleTap]
-    Align = Bottom
+    Align = bottom
     TabOrder = 0
-    Position.Y = 458.000000000000000000
     Size.Width = 640.000000000000000000
     Size.Height = 22.000000000000000000
     Size.PlatformDefault = False

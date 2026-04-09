@@ -62,7 +62,7 @@ procedure Tfrmlistausuarios.ListView1ItemClickEx(const Sender: TObject;
   const ItemObject: TListItemDrawable);
 begin
   ListView1.tag := dm.usuariosid.AsInteger;
-  dm.usuarios.Locate('id',ListView1.tag,[]);
+  dm.usuarios.Locate('usuid',ListView1.tag,[]);
   ShowMessage(IntToStr(ListView1.Tag));
   ShowMessage(dm.usuariosnome.AsString);
 end;

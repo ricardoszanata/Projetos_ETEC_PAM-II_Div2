@@ -7,7 +7,8 @@ object frmlistausuarios: Tfrmlistausuarios
   FormFactor.Width = 320
   FormFactor.Height = 480
   FormFactor.Devices = [Desktop]
-  DesignerMasterStyle = 3
+  OnShow = FormShow
+  DesignerMasterStyle = 0
   object Layout1: TLayout
     Align = Client
     Padding.Left = 2.000000000000000000
@@ -32,9 +33,8 @@ object frmlistausuarios: Tfrmlistausuarios
       TabOrder = 0
       object Button1: TButton
         Align = Left
-        Position.Y = 1.000000000000000000
         Size.Width = 48.000000000000000000
-        Size.Height = 48.000000000000000000
+        Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'arrowlefttoolbutton'
         TabOrder = 0
@@ -44,9 +44,8 @@ object frmlistausuarios: Tfrmlistausuarios
       object Button2: TButton
         Align = Right
         Position.X = 582.000000000000000000
-        Position.Y = 1.000000000000000000
         Size.Width = 48.000000000000000000
-        Size.Height = 48.000000000000000000
+        Size.Height = 50.000000000000000000
         Size.PlatformDefault = False
         StyleLookup = 'addtoolbutton'
         TabOrder = 1
@@ -60,6 +59,19 @@ object frmlistausuarios: Tfrmlistausuarios
       Size.Height = 370.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 1
+      object ListView1: TListView
+        ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+        ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+        HeaderAppearanceClassName = 'TListHeaderObjects'
+        FooterAppearanceClassName = 'TListHeaderObjects'
+        Align = Client
+        Size.Width = 630.000000000000000000
+        Size.Height = 370.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        OnItemClickEx = ListView1ItemClickEx
+        SearchVisible = True
+      end
     end
     object Layout4: TLayout
       Align = Bottom
@@ -69,6 +81,31 @@ object frmlistausuarios: Tfrmlistausuarios
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = dm.usuarios
+    ScopeMappings = <>
+    Left = 304
+    Top = 224
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'usunome'
+      Control = ListView1
+      FillExpressions = <
+        item
+          SourceMemberName = 'usulogin'
+          ControlMemberName = 'Detail'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
     end
   end
 end
