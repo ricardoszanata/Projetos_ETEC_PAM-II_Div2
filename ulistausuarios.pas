@@ -48,7 +48,7 @@ procedure Tfrmlistausuarios.carregaDados;
 begin
   { request é o objeto que faz a requisição do serviço
     resource é o complemento da BaseURL }
-  dm.RESTRequest1.Resource := '/susuarios.php';
+  dm.RESTRequest1.Resource := '/usuarios/susuarios.php';
   dm.RESTRequest1.Execute; // execsql open
 end;
 

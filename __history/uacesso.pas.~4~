@@ -1,0 +1,43 @@
+unit uacesso;
+
+interface
+
+uses
+  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.StdCtrls;
+
+type
+  Tfrmacesso = class(TForm)
+    Layout1: TLayout;
+    Layout2: TLayout;
+    Layout3: TLayout;
+    Layout4: TLayout;
+    Layout5: TLayout;
+    Image1: TImage;
+    edtusuario: TEdit;
+    edtsenha: TEdit;
+    btnacessar: TSpeedButton;
+
+  private
+    { Private declarations }
+
+    procedure teste();
+  public
+    { Public declarations }
+  end;
+
+var
+  frmacesso: Tfrmacesso;
+
+implementation
+
+{$R *.fmx}
+
+{ Tfrmacesso }
+
+procedure Tfrmacesso.teste;
+begin
+end;
+
+end.
