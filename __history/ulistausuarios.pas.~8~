@@ -28,7 +28,6 @@ type
     procedure ListView1ItemClickEx(const Sender: TObject; ItemIndex: Integer;
       const LocalClickPos: TPointF; const ItemObject: TListItemDrawable);
     procedure Button3Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -47,12 +46,6 @@ uses umodulo, uiuusuario;
 
 { Tfrmlistausuarios }
 
-procedure Tfrmlistausuarios.Button2Click(Sender: TObject);
-begin
-  frmiuusuario.id := 0;
-  frmiuusuario.Show;
-end;
-
 procedure Tfrmlistausuarios.Button3Click(Sender: TObject);
 begin
   frmiuusuario.Show;
@@ -62,8 +55,9 @@ procedure Tfrmlistausuarios.carregaDados;
 begin
   { request é o objeto que faz a requisição do serviço
     resource é o complemento da BaseURL }
-  dm.RESTRequest1.Resource := '/usuarios/susuarios.php';
-  dm.RESTRequest1.Execute;
+  //dm.RESTRequest1.Resource := '/usuarios/susuarios.php';
+  dm.RESTRequest1.Resource := '/susuarios.php';
+  dm.RESTRequest1.Execute; // execsql open
 end;
 
 procedure Tfrmlistausuarios.FormShow(Sender: TObject);
@@ -77,11 +71,13 @@ procedure Tfrmlistausuarios.ListView1ItemClickEx(const Sender: TObject;
 begin
   ListView1.tag := dm.usuariosid.AsInteger;
   dm.usuarios.Locate('id', ListView1.tag, []);
-
-  frmiuusuario.id := dm.usuariosid.AsInteger;
+  // ShowMessage(IntToStr(ListView1.Tag));
+  // ShowMessage(dm.usuariosnome.AsString);
+  // ShowMessage(IntToStr(dm.usuarioslogado.AsInteger));
+  frmiuusuario.usuid := dm.usuariosid.AsInteger;
   frmiuusuario.edtusunome.Text := dm.usuariosnome.AsString;
   frmiuusuario.edtusulogin.Text := dm.usuariosusuario.AsString;
-  frmiuusuario.swtlogado.IsChecked := dm.usuarioslogado.AsInteger.ToBoolean;
+  frmiuusuario.usulogado := dm.usuarioslogado.AsInteger;
 end;
 
 end.

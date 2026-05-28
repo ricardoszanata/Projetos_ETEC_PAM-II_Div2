@@ -104,10 +104,10 @@ object frmiuusuario: Tfrmiuusuario
       Size.PlatformDefault = False
       TabOrder = 3
       object swtlogado: TSwitch
-        Align = Center
         IsChecked = False
+        Position.X = 280.000000000000000000
+        Position.Y = 16.000000000000000000
         TabOrder = 0
-        Visible = False
       end
     end
     object Layout6: TLayout
@@ -123,7 +123,6 @@ object frmiuusuario: Tfrmiuusuario
         TabOrder = 0
         Text = 'GRAVAR'
         TextSettings.Trimming = None
-        OnClick = btngravarClick
       end
     end
   end

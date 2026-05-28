@@ -38,7 +38,7 @@ implementation
 
 {$R *.fmx}
 
-uses umodulo, ulistausuarios;
+uses umodulo;
 
 // dm.RESTRequest1.Resource := '/usuarios/uusuario.php?jsn={parametro}';
 // dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
@@ -51,7 +51,7 @@ begin
   if (id <> 0) then
   begin
     jsnobj.AddPair('id', id);
-    // jsnobj.AddPair('logado', swtlogado.IsChecked.ToInteger);
+    jsnobj.AddPair('logado', swtlogado.IsChecked.ToInteger);
     dm.RESTRequest1.Resource := '/usuarios/uusuario.php?jsn={parametro}';
     dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
   end
@@ -61,8 +61,6 @@ begin
     dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
   end;
   dm.RESTRequest1.Execute;
-  frmlistausuarios.carregaDados;
-  Close;
 end;
 
 end.

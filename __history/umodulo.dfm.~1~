@@ -5,7 +5,7 @@ object dm: Tdm
   object RESTClient1: TRESTClient
     Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
     AcceptCharset = 'utf-8, *;q=0.8'
-    BaseURL = 'http://localhost/Projetos_ETEC_PWEB-III_Div2/api'
+    BaseURL = 'http://127.0.0.1:8066/Projetos_ETEC_PWEB-III_Div2/api'
     Params = <>
     SynchronizedEvents = False
     Left = 183
@@ -51,7 +51,7 @@ object dm: Tdm
       FieldName = 'usuario'
       Size = 150
     end
-    object usuarioslogado: TIntegerField
+    object usuarioslogado: TBooleanField
       FieldName = 'logado'
     end
   end

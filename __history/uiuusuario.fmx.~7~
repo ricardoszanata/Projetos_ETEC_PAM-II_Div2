@@ -107,7 +107,6 @@ object frmiuusuario: Tfrmiuusuario
         Align = Center
         IsChecked = False
         TabOrder = 0
-        Visible = False
       end
     end
     object Layout6: TLayout
@@ -123,7 +122,6 @@ object frmiuusuario: Tfrmiuusuario
         TabOrder = 0
         Text = 'GRAVAR'
         TextSettings.Trimming = None
-        OnClick = btngravarClick
       end
     end
   end

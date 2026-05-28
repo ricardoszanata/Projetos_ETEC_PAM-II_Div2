@@ -21,11 +21,9 @@ type
     btngravar: TButton;
     Layout6: TLayout;
     swtlogado: TSwitch;
-    procedure btngravarClick(Sender: TObject);
 
   private
     { Private declarations }
-    jsnobj: TJSONObject;
   public
     { Public declarations }
     id: integer;
@@ -38,31 +36,8 @@ implementation
 
 {$R *.fmx}
 
-uses umodulo, ulistausuarios;
+uses umodulo;
 
 // dm.RESTRequest1.Resource := '/usuarios/uusuario.php?jsn={parametro}';
 // dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
-procedure Tfrmiuusuario.btngravarClick(Sender: TObject);
-begin
-  jsnobj := TJSONObject.Create;
-  jsnobj.AddPair('nome', edtusunome.Text);
-  jsnobj.AddPair('login', edtusulogin.Text);
-  jsnobj.AddPair('senha', edtususenha.Text);
-  if (id <> 0) then
-  begin
-    jsnobj.AddPair('id', id);
-    // jsnobj.AddPair('logado', swtlogado.IsChecked.ToInteger);
-    dm.RESTRequest1.Resource := '/usuarios/uusuario.php?jsn={parametro}';
-    dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
-  end
-  else
-  begin
-    dm.RESTRequest1.Resource := '/usuarios/iusuario.php?jsn={parametro}';
-    dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
-  end;
-  dm.RESTRequest1.Execute;
-  frmlistausuarios.carregaDados;
-  Close;
-end;
-
 end.

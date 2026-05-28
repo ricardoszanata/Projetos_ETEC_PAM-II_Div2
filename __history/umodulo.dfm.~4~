@@ -5,7 +5,7 @@ object dm: Tdm
   object RESTClient1: TRESTClient
     Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
     AcceptCharset = 'utf-8, *;q=0.8'
-    BaseURL = 'http://localhost/Projetos_ETEC_PWEB-III_Div2/api'
+    BaseURL = 'https://nerd.tec.br/etec162/api'
     Params = <>
     SynchronizedEvents = False
     Left = 183

@@ -78,7 +78,7 @@ begin
   ListView1.tag := dm.usuariosid.AsInteger;
   dm.usuarios.Locate('id', ListView1.tag, []);
 
-  frmiuusuario.id := dm.usuariosid.AsInteger;
+  frmiuusuario.usuid := dm.usuariosid.AsInteger;
   frmiuusuario.edtusunome.Text := dm.usuariosnome.AsString;
   frmiuusuario.edtusulogin.Text := dm.usuariosusuario.AsString;
   frmiuusuario.swtlogado.IsChecked := dm.usuarioslogado.AsInteger.ToBoolean;

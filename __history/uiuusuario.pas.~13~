@@ -51,7 +51,7 @@ begin
   if (id <> 0) then
   begin
     jsnobj.AddPair('id', id);
-    // jsnobj.AddPair('logado', swtlogado.IsChecked.ToInteger);
+    //jsnobj.AddPair('logado', swtlogado.IsChecked.ToInteger);
     dm.RESTRequest1.Resource := '/usuarios/uusuario.php?jsn={parametro}';
     dm.RESTRequest1.Params.AddUrlSegment('parametro', jsnobj.ToString);
   end

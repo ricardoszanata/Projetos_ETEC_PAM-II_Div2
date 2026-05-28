@@ -51,7 +51,6 @@ object frmlistausuarios: Tfrmlistausuarios
         TabOrder = 1
         Text = 'Button2'
         TextSettings.Trimming = None
-        OnClick = Button2Click
       end
     end
     object Layout3: TLayout
@@ -82,18 +81,6 @@ object frmlistausuarios: Tfrmlistausuarios
       Size.Height = 50.000000000000000000
       Size.PlatformDefault = False
       TabOrder = 2
-      object Button3: TButton
-        Align = Right
-        Position.X = 582.000000000000000000
-        Size.Width = 48.000000000000000000
-        Size.Height = 50.000000000000000000
-        Size.PlatformDefault = False
-        StyleLookup = 'composetoolbutton'
-        TabOrder = 1
-        Text = 'Button2'
-        TextSettings.Trimming = None
-        OnClick = Button3Click
-      end
     end
   end
   object BindSourceDB1: TBindSourceDB

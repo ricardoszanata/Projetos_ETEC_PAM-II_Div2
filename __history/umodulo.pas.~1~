@@ -22,13 +22,13 @@ type
     usuariosid: TIntegerField;
     usuariosnome: TStringField;
     usuariosusuario: TStringField;
+    usuarioslogado: TBooleanField;
     RRDSALogin: TRESTResponseDataSetAdapter;
     login: TFDMemTable;
     IntegerField1: TIntegerField;
     StringField1: TStringField;
     StringField2: TStringField;
     BooleanField1: TBooleanField;
-    usuarioslogado: TIntegerField;
   private
     { Private declarations }
   public

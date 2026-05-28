@@ -51,7 +51,6 @@ object frmlistausuarios: Tfrmlistausuarios
         TabOrder = 1
         Text = 'Button2'
         TextSettings.Trimming = None
-        OnClick = Button2Click
       end
     end
     object Layout3: TLayout
