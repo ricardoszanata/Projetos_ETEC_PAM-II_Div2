@@ -6,15 +6,17 @@ uses
   uacesso in 'uacesso.pas' {frmacesso},
   umodulo in 'umodulo.pas' {dm: TDataModule},
   uiuusuario in 'uiuusuario.pas' {frmiuusuario},
-  ulistausuarios in 'ulistausuarios.pas' {frmlistausuarios};
+  ulistausuarios in 'ulistausuarios.pas' {frmlistausuarios},
+  umenu in 'umenu.pas' {frmmenu};
 
 {$R *.res}
 
 begin
   Application.Initialize;
-  Application.CreateForm(Tfrmlistausuarios, frmlistausuarios);
   Application.CreateForm(Tfrmacesso, frmacesso);
+  Application.CreateForm(Tfrmlistausuarios, frmlistausuarios);
   Application.CreateForm(Tfrmiuusuario, frmiuusuario);
   Application.CreateForm(Tdm, dm);
+  Application.CreateForm(Tfrmmenu, frmmenu);
   Application.Run;
 end.

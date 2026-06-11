@@ -29,6 +29,13 @@ type
     StringField2: TStringField;
     BooleanField1: TBooleanField;
     usuarioslogado: TIntegerField;
+    conexao: TFDConnection;
+    logado: TFDQuery;
+    logadousuid: TFDAutoIncField;
+    logadousunome: TWideMemoField;
+    logadousulogin: TWideMemoField;
+    logadoususenha: TWideMemoField;
+    logadousulogado: TBooleanField;
   private
     { Private declarations }
   public

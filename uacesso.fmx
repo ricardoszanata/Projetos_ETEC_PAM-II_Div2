@@ -122,6 +122,7 @@ object frmacesso: Tfrmacesso
         Size.PlatformDefault = False
         Text = 'ACESSAR'
         TextSettings.Trimming = None
+        OnClick = btnacessarClick
       end
     end
   end

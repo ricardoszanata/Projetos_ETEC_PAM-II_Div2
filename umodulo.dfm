@@ -87,4 +87,45 @@ object dm: Tdm
       FieldName = 'logado'
     end
   end
+  object conexao: TFDConnection
+    Params.Strings = (
+      'Database=C:\Projetos_ETEC_PAM-II_Div2\bdlanchonete.db'
+      'DriverID=SQLite')
+    Connected = True
+    LoginPrompt = False
+    Left = 384
+    Top = 8
+  end
+  object logado: TFDQuery
+    Connection = conexao
+    SQL.Strings = (
+      'select * from usuarios')
+    Left = 456
+    Top = 8
+    object logadousuid: TFDAutoIncField
+      FieldName = 'usuid'
+      Origin = 'usuid'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = False
+    end
+    object logadousunome: TWideMemoField
+      FieldName = 'usunome'
+      Origin = 'usunome'
+      BlobType = ftWideMemo
+    end
+    object logadousulogin: TWideMemoField
+      FieldName = 'usulogin'
+      Origin = 'usulogin'
+      BlobType = ftWideMemo
+    end
+    object logadoususenha: TWideMemoField
+      FieldName = 'ususenha'
+      Origin = 'ususenha'
+      BlobType = ftWideMemo
+    end
+    object logadousulogado: TBooleanField
+      FieldName = 'usulogado'
+      Origin = 'usulogado'
+    end
+  end
 end

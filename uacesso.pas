@@ -3,9 +3,11 @@ unit uacesso;
 interface
 
 uses
-  System.SysUtils, System.Types, System.UITypes, System.Classes, System.Variants,
+  System.SysUtils, System.Types, System.UITypes, System.Classes,
+  System.Variants,
   FMX.Types, FMX.Controls, FMX.Forms, FMX.Graphics, FMX.Dialogs,
-  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.StdCtrls, System.JSON;
+  FMX.Controls.Presentation, FMX.Edit, FMX.Objects, FMX.Layouts, FMX.StdCtrls,
+  System.JSON;
 
 type
   Tfrmacesso = class(TForm)
@@ -18,6 +20,7 @@ type
     edtusuario: TEdit;
     edtsenha: TEdit;
     btnacessar: TSpeedButton;
+    procedure btnacessarClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -42,17 +45,25 @@ uses umodulo;
 
 procedure Tfrmacesso.acessaUsuario;
 begin
-try
+  try
     jsonobj := TJSONObject.Create;
     jsonobj.AddPair('usuario', edtusuario.Text);
     jsonobj.AddPair('senha', edtsenha.Text);
     dm.RESTRequest1.Resource := '/usuarios/login.php?jsn={parametro}';
-
+    dm.RESTRequest1.Params.AddUrlSegment('parametro', jsonobj.ToString);
     dm.RESTRequest1.Execute;
-finally
+    //logica para armazenar se o usuario já logou
+    ShowMessage(IntToStr(dm.usuariosid.AsInteger) + ' - ' +
+      dm.usuariosnome.AsString);
+  finally
+
+  end;
 
 end;
 
+procedure Tfrmacesso.btnacessarClick(Sender: TObject);
+begin
+  acessaUsuario;
 end;
 
 end.
